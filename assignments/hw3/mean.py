@@ -13,7 +13,7 @@ def main():
     tot = 0
     den = 0
     between = 1
-    for i in range(num_values):
+    for _ in range(num_values):
         enter_value = eval(input("Enter value: "))
         sqrt_numbers = (enter_value ** 2)
         tot = tot + sqrt_numbers
