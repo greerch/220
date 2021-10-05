@@ -56,7 +56,7 @@ def word_average():
         for words in word_count:
              character_count = character_count + len(words)
         average = character_count / num_words
-        print(average)
+        print("The word average is: ", average)
 
 def pig_latin():
     original_sentence = input("Enter a sentence to convert: ")
