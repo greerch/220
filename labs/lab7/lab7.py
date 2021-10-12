@@ -26,7 +26,7 @@ def encode():
 
 def sphere_area(radius):
     surface_area = 4 * pi * radius**2
-    return round(surface_area
+    return round(surface_area)
 
 def sphere_volume(radius):
     volume = (4 / 3) * pi * radius**3
@@ -52,15 +52,12 @@ def encode_better():
     print(new, end=" ")
 
 
- def main():
-     cash_conversion()
-     encode()
-     sphere_area()
-     sphere_volume()
-     sum_n()
-     sum_n_cubes()
-     encode_better()
-     pass
-
-if __name__ == '__main__':
-    main()
+def main():
+    cash_conversion()
+    encode()
+    sphere_area()
+    sphere_volume()
+    sum_n()
+    sum_n_cubes()
+    encode_better()
+main()
