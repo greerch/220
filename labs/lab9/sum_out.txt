@@ -1,0 +1,2 @@
+Sum of squares = 200
+Sum of squares = 125
