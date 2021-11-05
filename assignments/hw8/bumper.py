@@ -14,7 +14,7 @@ from graphics import *
 
 def main():
     win = GraphWin("Bumper", 700, 500)
-    circle_a = Circle(Point(300, 300), 20)
+    circle_a = Circle(Point(300, 300), 30)
     red = abs(get_random(255))
     green = abs(get_random(255))
     blue = abs(get_random(255))
@@ -22,7 +22,7 @@ def main():
     circle_a.setFill(colors)
     circle_a.draw(win)
 
-    circle_b = Circle(Point(200, 200), 20)
+    circle_b = Circle(Point(200, 200), 30)
     red_b = abs(get_random(255))
     green_b = abs(get_random(255))
     blue_b = abs(get_random(255))
@@ -52,12 +52,9 @@ def main():
             b = -b
             circle_b.move(a, b)
         if did_collide(circle_a, circle_b):
-            a = -a
-            b = -b
-            x = -x
-            y = -y
-            circle_a.move(a, b)
-            circle_b.move(x, y)
+            x, y, a, b = a, b, x, y
+            circle_a.move(x, y)
+            circle_b.move(a, b)
 
 
 def get_random(move_amount):
