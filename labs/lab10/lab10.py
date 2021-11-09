@@ -70,7 +70,9 @@ def game_over_test(board):
 
 
 def main():
-    print("directions")
+    print("Welcome to TicTacToe! You and your opponent will be playing a competitive game of TicTacToe, " +
+    "with one player being 'x' " +
+    "and the other character being 'o'. Choose who will go first and let's start the game!")
     board = create_board()
     draw_board(board)
     player = 1
