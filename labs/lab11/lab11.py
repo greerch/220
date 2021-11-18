@@ -65,7 +65,7 @@ def play():
                 guessed_words = holder
             print("".join(guessed_words))
             used_letters.append(guess)
-            print("this is the amount of wrong tries you have attempted is " + str(count) + " out of 7")
+            print("the amount of wrong tries you have attempted is " + str(count) + " out of 7")
             print("the letters you have already tried are: ", "," .join(used_letters))
         else:
             print("you stink, sorry!")
