@@ -64,12 +64,12 @@ def hi_lo_game():
 
 
 def main():
-    #find_and_remove_first([15, 20, 30, 40, 50], 30)
-    #read_data("read_data_test_data.txt")
-    #is_in_linear(12, [15, 20, 30, 40, 50])
-    #good_input()
+    find_and_remove_first([15, 20, 30, 40, 50], 30)
+    read_data("read_data_test_data.txt")
+    is_in_linear(12, [15, 20, 30, 40, 50])
+    good_input()
     num_digits()
-    #hi_lo_game()
+    hi_lo_game()
 
 
 main()
