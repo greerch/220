@@ -1,42 +1,22 @@
-from algorithms import *
-from graphics import Point, Rectangle
-
-"""
-Name: Caroline Greer
-lab13.py
-
-Discription: Complete Lab 13
-
-Certification of authenticity:
-I certify that this assignment is entirely my own work
-"""
-
-
-def trade_alert(filename):
+def read_data(filename):
     file = open(filename, "r")
-    file_nums = file.readline()
-    file_value = file_nums.split(" ")
-    for index in range(0, len(file_value)):
-        if 830 < int(file_value[index]):
-            print("this is a warning, the trade volume is above 830. At", index + 1, "seconds the trade value is",
-                  file_value[index])
-        if 500 == int(file_value[index]):
-            print("pay attention, the trade volume is at 500. This is happening at", index + 1, "seconds")
-    file.close()
+    file = file.read()
+    lines = file.split()
+    num = 0
+    while num < len(lines):
+        lines[num] = eval(lines[num])
+        num += 1
+    return lines
 
 
+def is_in_linear(search_val, values):
+    num = 0
+    while num < len(values):
+        if search_val == values[num]:
+            return True
+        num += 1
+    return False
 
-def main():
-    trade_alert("trades.txt")
-    is_in_binary(20, [15, 20, 30, 40, 50])
-    selection_sort([20, 40, 4, 28, 19, 3, 22, 43, 0, 18, -4])
-    rect_sort([Rectangle(Point(1, 2), Point(3, 4)), Rectangle(Point(1, 8), (Point(10, 1)))])
-
-main()
-
-
-"""
-from algorithms.py
 
 def is_in_binary(search_val, values):
     left = 0
@@ -61,14 +41,13 @@ def selection_sort(values):
             if values[i] < values[lowest]:
                 lowest = i
         values[bottom], values[lowest] = values[lowest], values[bottom]
-        
-        
+
+
 def rect_sort(rectangles):
     area_list = []
     for i in range(len(rectangles)):
         area_list.append(calc_area(rectangles[i]))
     selection_sort(area_list)
-    return area_list
 
 
 def calc_area(rect):
@@ -80,4 +59,3 @@ def calc_area(rect):
     height = abs(p1y - p2y)
     area = base * height
     return area
-"""
