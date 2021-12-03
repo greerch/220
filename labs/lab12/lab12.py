@@ -1,4 +1,4 @@
-from algorithms import *
+from lab13.algorithms import *
 from random import randint
 
 """
